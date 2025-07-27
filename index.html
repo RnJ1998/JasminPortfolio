@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmin Tötterman - My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #1a1a1a;
+        }
+
+        /* --- New Header & Contact Styles --- */
+        header {
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .header-text {
+            flex-grow: 1;
+        }
+        .header-text h1 {
+            margin-bottom: 0.5rem;
+        }
+        .profile-picture-container {
+            flex-shrink: 0;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e0e0e0;
+            display: block;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 2rem; /* vertical-gap horizontal-gap */
+            justify-content: flex-start;
+        }
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s;
+        }
+        .contact-info a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .contact-info i {
+            color: #1a1a1a;
+        }
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .contact-info {
+                justify-content: center;
+            }
+        }
+
+        .project {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .project:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        img, .pdf-embed, .video-embed {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .pdf-embed {
+            width: 100%;
+            height: 500px; /* Adjust height as needed */
+            border: 1px solid #ccc;
+        }
+        .video-embed {
+            aspect-ratio: 16 / 9; /* For responsive 16:9 video */
+            width: 100%;
+        }
+        /* Added for vertical YouTube Shorts */
+        .video-short {
+            aspect-ratio: 9 / 16;
+            max-width: 300px; /* Keeps the video from being too wide */
+            margin: 0 auto; /* Centers the video horizontally */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Jasmin Tötterman</h1>
+                    <p>Welcome to my portfolio. Here is a selection of my recent projects. Feel free to explore the page!</p>
+                    <p>This page is made to showcase my work in an easily accessible way.</p>
+                </div>
+                <div class="profile-picture-container">
+                    <!-- TODO: Replace the src with your actual image path, e.g., ./assets/profile.jpg -->
+                    <img src="https://via.placeholder.com/150" alt="A placeholder for Jasmin Tötterman's profile picture" class="profile-picture">
+                </div>
+            </div>
+            <div class="contact-info">
+                <!-- TODO: Replace with your actual contact details -->
+                <a href="mailto:jasu.totterman@gmail.com"><i class="fas fa-envelope fa-fw"></i> jasu.totterman@gmail.com</a>
+                <a href="tel:+358452499311"><i class="fas fa-phone fa-fw"></i> +358 45 249 9311</a>
+                <a href="https://www.linkedin.com/in/jasmin-totterman1700/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fa-fw"></i> My LinkedIn Profile</a>
+            </div>
+        </header>
+
+        <main>
+            
+
+            <!-- Project: PDF Document -->
+            <div class="project">
+                <h2>Project: "Makein Kesä" Graphic Design</h2>
+                <p>This is a poster set of slides I designed for a local event. You can scroll through the embedded PDF below.</p>
+                <!--<p>*more detailed description goes here</p>
+                <!-- Your .pdf file -->
+                <iframe class="pdf-embed" src="./assets/Mak_kohteet24.pdf" title="UX Case Study PDF"></iframe>
+            </div>
+
+            <!-- Project: Video -->
+            <div class="project">
+                <h2>Project: Lappeenranta TikTok Short Videos</h2>
+                <p>Videos I created to showcase the beauty of Lappeenranta to tourist visitors.</p>
+                <p>Aims to tap into the viewer's emotions through choice of beatiful scenery and music.</p>
+                <!-- YouTube Short: added the "video-short" class for correct aspect ratio -->
+                <!-- YouTube Short: added the "video-short" class for correct aspect ratio -->
+                <iframe class="video-embed video-short" src="https://www.youtube.com/embed/KW1cZxeQ21M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+                <iframe class="video-embed video-short" src="https://www.youtube.com/embed/r-5AqYWn_yM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Copy and paste this whole 'project' div for each new image file -->
+            <!-- <div class="project">
+                <h2>Another Image Project Title</h2>
+                <p>A description of your new image project goes here.</p>
+                <img src="./assets/YOUR_FILENAME.png" alt="A descriptive alt text for your image">
+            </div>
+
+            <!-- TEMPLATE FOR A NEW PDF PROJECT -->
+            <!-- Copy and paste this whole 'project' div for each new PDF file -->
+            <div class="project">
+                <h2>Project: Lappeenranta Travel Poster</h2>
+                <p>I created this design for a local event.</p>
+                <!-- Update the file name in src="" and the title="" -->
+                <iframe class="pdf-embed" src="./assets/Matk_esite24.pdf" title="Descriptive title for your PDF"></iframe>
+            </div>
+
+            <!-- Copy and paste this whole 'project' div for each new video -->
+            <div class="project">
+                <h2>Project: "Kilpisjärvi" Travel Tour</h2>
+                <p>I created a travel tour package as a school project.</p>
+                <!-- Update the file name in src="" and the title="" -->
+                <iframe class="pdf-embed" src="./assets/Vaellus_Kilpisjärvelle.pdf" title="Descriptive title for your PDF"></iframe>
+            </div>
+            <!-- Project 1: Image Showcase -->
+            <div class="project">
+                <h2>Project: "Draamakierros" Graphic Design</h2>
+                <p>This is a poster I designed for a local event.</p>
+                <!-- Your .png file -->
+                <img src="./assets/Matk_Draamakierros.png" alt="A poster for a local event">
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
